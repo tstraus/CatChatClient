@@ -8,7 +8,7 @@ window.onload = function() {
             document.getElementById("sendButton").click();
         }
     });
-    
+
     ws = new WebSocket("ws://127.0.0.1:1234");
 
     ws.onopen = function (event) {
@@ -19,6 +19,14 @@ window.onload = function() {
     
         ws.send(JSON.stringify(join));
     }
+
+    ws.onmessage = function (event) {
+        var msg = JSON.parse(event.data);
+        
+        if (msg.type === "msg") {
+            console.log(msg.user + ": " + msg.data);
+        }
+    };
 }
 
 function sendMessage() {
