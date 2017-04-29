@@ -24,7 +24,7 @@ window.onload = function() {
         var msg = JSON.parse(event.data);
         
         if (msg.type === "msg") {
-            console.log(msg.user + ": " + msg.data);
+            console.log(msg.user + ": \"" + msg.data + "\"");
         }
     };
 }
