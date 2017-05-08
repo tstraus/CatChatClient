@@ -9,8 +9,8 @@ window.onload = function() {
         }
     });
 
-    //ws = new WebSocket("ws://tstraus.net:1234");
-    ws = new WebSocket("ws://127.0.0.1:1234");
+    ws = new WebSocket("ws://tstraus.net:1234");
+    //ws = new WebSocket("ws://127.0.0.1:1234");
 
     ws.onopen = function (event) {
         /*var join = {
