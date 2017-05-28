@@ -1,4 +1,5 @@
-var ws;
+var ws; // the websocket connection
+var uuid; // the uuid received from the server
 
 window.onload = function() {
     document.getElementById("input").addEventListener("keyup", function(event) {
@@ -9,20 +10,19 @@ window.onload = function() {
         }
     });
 
-    ws = new WebSocket("ws://tstraus.net:1234");
-    //ws = new WebSocket("ws://127.0.0.1:1234");
+    //ws = new WebSocket("ws://tstraus.net:1234");
+    ws = new WebSocket("ws://127.0.0.1:1234");
 
     ws.onopen = function (event) {
-        /*var join = {
-            user: "Tuckles",
-            type: "join"
-        };
-
-        ws.send(JSON.stringify(join));*/
+        console.log("Connected");
     }
 
     ws.onmessage = function (event) {
         var msg = JSON.parse(event.data);
+
+        if (msg.type === "uuid") {
+            uuid = msg.uuid;
+        }
 
         if (msg.type === "msg") {
             console.log(msg.user + ": \"" + msg.data + "\"");
@@ -30,10 +30,11 @@ window.onload = function() {
     };
 };
 
-function sendConnect() {
+function sendJoin() {
     var join = {
-        user: document.getElementById("user").value,
-        type: "join"
+        type: "join",
+        uuid: uuid,
+        user: document.getElementById("user").value
     };
 
     ws.send(JSON.stringify(join));
@@ -41,8 +42,9 @@ function sendConnect() {
 
 function sendMessage() {
     var msg = {
-        user: document.getElementById("user").value,
         type: "msg",
+        uuid: uuid,
+        user: document.getElementById("user").value,
         data: {
             dest: document.getElementById("dest").value,
             msg: document.getElementById("input").value
