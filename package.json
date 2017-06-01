@@ -1,0 +1,27 @@
+{
+  "name": "catchatwebclient",
+  "version": "1.0.0",
+  "description": "we'll see",
+  "main": "ws_client.js",
+  "scripts": {
+    "test": "standard --verbose | snazzy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tstraus/CatChatWebClient.git"
+  },
+  "author": "Tucker Strausbaugh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tstraus/CatChatWebClient/issues"
+  },
+  "homepage": "https://github.com/tstraus/CatChatWebClient#readme",
+  "devDependencies": {
+    "snazzy": "^7.0.0",
+    "standard": "^10.0.2",
+    "webpack": "^2.6.1"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3"
+  }
+}
