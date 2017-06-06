@@ -1,3 +1,12 @@
 body {
-    background-color: gray
+    background-color: #0f0f0f
 }
+
+input, select, textarea{
+    color: #ffffff;
+}
+/*
+input[type="text"] {
+  background-color: transparent;
+  border-color: #f0f000;
+}*/

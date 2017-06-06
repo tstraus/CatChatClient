@@ -1,5 +1,7 @@
 /* eslint-env browser */
 
+var bcrypt = require('bcryptjs')
+
 let ws
 
 window.onload = function () {
@@ -13,6 +15,9 @@ window.onload = function () {
 
     // ws = new WebSocket('ws://tstraus.net:1234');
   ws = new WebSocket('ws://127.0.0.1:1234')
+
+  var salt = bcrypt.genSaltSync(10)
+  console.log('salt: ', salt)
 
   ws.onopen = function (event) {
     console.log('Connected')
