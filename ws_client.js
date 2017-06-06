@@ -5,6 +5,11 @@ var bcrypt = require('bcryptjs')
 let ws
 
 window.onload = function () {
+  // hook up button events to handlers
+  document.getElementById('connectButton').addEventListener('click', sendJoin)
+  document.getElementById('sendButton').addEventListener('click', sendMessage)
+
+  // setup enter to send when in the message field
   document.getElementById('input').addEventListener('keyup', function (event) {
     event.preventDefault()
 
@@ -13,7 +18,7 @@ window.onload = function () {
     }
   })
 
-    // ws = new WebSocket('ws://tstraus.net:1234');
+  // ws = new WebSocket('ws://tstraus.net:1234');
   ws = new WebSocket('ws://127.0.0.1:1234')
 
   var salt = bcrypt.genSaltSync(10)
@@ -39,7 +44,7 @@ function sendJoin () { // eslint-disable-line no-unused-vars
   }
 
   ws.send(JSON.stringify(join))
-};
+}
 
 function sendMessage () { // eslint-disable-line no-unused-vars
   const msg = {
