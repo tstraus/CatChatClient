@@ -5,7 +5,7 @@
   "main": "ws_client.js",
   "scripts": {
     "test": "standard --verbose | snazzy",
-    "postinstall": "webpack && copyfiles -f style.css index.html kitten.jpg node_modules/milligram/dist/milligram.min.css dist"
+    "postinstall": "webpack && copyfiles -f style.css index.html kitten.jpg favicon.png node_modules/milligram/dist/milligram.min.css dist"
   },
   "repository": {
     "type": "git",
