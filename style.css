@@ -1,12 +1,85 @@
-body {
-    background-color: #0f0f0f
+a {
+    color: #001F3F;
 }
 
-input, select, textarea{
+.button, button, input[type='button'], input[type='reset'], input[type='submit'] {
+    background-color: #001F3F;
+    border: .1rem solid #001F3F;
+}
+
+.button.button-outline, button.button-outline, input[type='button'].button-outline, input[type='reset'].button-outline, input[type='submit'].button-outline {
+    color: #001F3F;
+}
+
+.button.button-clear, button.button-clear, input[type='button'].button-clear, input[type='reset'].button-clear, input[type='submit'].button-clear {
+    color: #001F3F;
+}
+
+pre.prettyprint .lit {
+    color: #001F3F;
+}
+
+.share-icon {
+    background-color: #001F3F;
     color: #ffffff;
 }
-/*
-input[type="text"] {
-  background-color: transparent;
-  border-color: #f0f000;
-}*/
+
+pre {
+    background: #f4f5f6;
+    border-left: .3rem solid #001F3F;
+}
+
+pre.prettyprint {
+    border-left: .3rem solid #001F3F !important;
+    color: #655d5d;
+}
+
+
+
+pre.prettyprint .tag {
+    color: #001F3F;
+}
+
+pre.prettyprint .atn {
+    color: #0065ce;
+}
+
+input[type='email'], input[type='number'], input[type='password'], input[type='search'], input[type='tel'], input[type='text'], input[type='url'], textarea, select {
+    background-color: #ffffff;
+    border: .1rem solid #001F3F;
+}
+
+input[type='email']:focus, input[type='number']:focus, input[type='password']:focus, input[type='search']:focus, input[type='tel']:focus, input[type='text']:focus, input[type='url']:focus, textarea:focus, select:focus {
+    background-color: #ffffff;
+    border: .1rem solid #001F3F;
+}
+
+.github-corner {
+    color: #f4f5f6;
+    fill: #001F3F;
+}
+
+body {
+    background-image: url("kitten.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h1.title {
+    text-align: center;
+    color: #ffffff;
+}
+
+div.messages {
+    background-color: #001F3F;
+}
+
+h6.rx {
+    text-align: left;
+    color: #ffffff;
+}
+
+h6.tx {
+    text-align: right;
+    color: #ffffff;
+}

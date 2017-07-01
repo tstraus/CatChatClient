@@ -11,9 +11,22 @@
 <link rel="stylesheet" href="style.css">
 
 <body>
-    <input id="user" type="text"><br>
-    <button id="connectButton" class="button button-outline">Connect</button><br><br>
-    <input id="dest" type="text"><br>
-    <input id="input" type="text"><br>
-    <button id="sendButton" class="button button-outline">Send</button>
+    <h1 class="title">CatChat</h1>
+
+    <div class="container">
+        <div class="row">
+            <div class="column">
+                <input id="user" type="text" placeholder="your username"><br>
+                <button id="connectButton" class="button button">Connect</button><br><br>
+
+                <div class="messages" id="messages"></div>
+            </div>
+
+            <div class="column">
+                <input id="dest" type="text" placeholder="their username"><br>
+                <textarea placeholder="message..." id="input"></textarea>
+                <button id="sendButton" class="button button">Send</button>
+            </div>
+        </div>
+    </div>
 </body>
